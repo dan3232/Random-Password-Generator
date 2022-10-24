@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password Generator</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="main-box">
+        <div class="first-child-box">
+            <div class="title-box">
+                <p>Generate a</p>
+                <p>random password</p>
+            </div>
+            <h4>Never use an insecure password again.</h4>
+            <div class="input-box">
+                <button id="generator-btn" onclick="generate()">Generate passwords</button>
+                <input value="8" type="number" id="value-el" onchange="lengthValue()" placeholder="Set password length">
+            </div>
+            <div class="buttons-box">
+                <div>
+                    <p>Symbols</p>
+                    <p>Numbers</p>
+                </div>
+                <div>
+                    <button id="symb-btn" onclick="symbolsClick()">On</button>
+                    <button id="numb-btn" onclick="numbersClick()">On</button>
+                </div>
+            </div>
+        </div>    
+        <div class="second-child-box">
+            <div>
+                <button onclick="myFunction()" id="first-el">---------------</button>
+            </div>
+            <div>
+                <button onclick="" id="second-el">---------------</button>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
