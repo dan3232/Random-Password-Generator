@@ -10,31 +10,32 @@ let first = document.getElementById("first-el"),
 document.getElementById("value-el").addEventListener("keyup", generate);
     
 function generate() {
-    value = parseInt(document.getElementById("value-el").value)
+    values = parseInt(document.getElementById("value-el").value)
     let caracteres = numbers.concat(letters, symbols);
-    if (value < 21) {
-        first.textContent = ""
-        second.textContent = ""
+    if (values < 21) {
+        first.value = ""
+        second.value = ""
             
-    for (let i = 0; i < value; i++){
+    for (let i = 0; i < values; i++){
         let alAzar = Math.floor(Math.random()* caracteres.length)
-        first.textContent += caracteres[alAzar]
+        first.value += caracteres[alAzar]
     }
     
-    for (let x = 0; x < value; x++){
+    for (let x = 0; x < values; x++){
         let alAzar = Math.floor(Math.random()* caracteres.length)
-        second.textContent += caracteres[alAzar]
+        second.value += caracteres[alAzar]
     }
     } else {
-        first.textContent = "---------------"
-        second.textContent = "---------------"
+        first.value = "---------------"
+        second.value = "---------------"
     }
 }
 
-function myFunction() {  
-    first.select();
-    first.setSelectionRange(0, 99999);
-    document.execCommand("copy")
+function myFunction(copyText) {  
+    copyText.select();
+    // first.setSelectionRange(0, 99999);
+    // document.execCommand("copy")
+    navigator.clipboard.writeText(copyText.value)
 }
 
 function symbolsClick() {

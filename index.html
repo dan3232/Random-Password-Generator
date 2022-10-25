@@ -20,7 +20,7 @@
             <h4>Never use an insecure password again.</h4>
             <div class="input-box">
                 <button id="generator-btn" onclick="generate()">Generate passwords</button>
-                <input value="8" type="number" id="value-el" onchange="lengthValue()" placeholder="Set password length">
+                <input value="8" type="number" id="value-el" placeholder="Set password length">
             </div>
             <div class="buttons-box">
                 <div>
@@ -35,10 +35,10 @@
         </div>    
         <div class="second-child-box">
             <div>
-                <button onclick="myFunction()" id="first-el">---------------</button>
+                <input onclick="myFunction(first)" id="first-el" value="---------------" readonly>
             </div>
             <div>
-                <button onclick="" id="second-el">---------------</button>
+                <input onclick="myFunction(second)" id="second-el" value="---------------" readonly>
             </div>
         </div>
     </div>
